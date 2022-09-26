@@ -1,0 +1,151 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.picture {
+  display: flex;
+  width: 100%;
+}
+.img {
+  width: stretch;
+}
+.hero-image {
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/font1920.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 20px solid #121212;
+}
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.hero-text {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Oswald";
+}
+
+p.normal {
+  font-style: normal;
+}
+p.right {
+  padding-left: 50px;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+.main {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+.figure {
+  display: flex;
+  justify-content: center;
+}
+p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+p {
+  padding-left: 15px;
+}
+.footer {
+  background-color: #121212;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+.header {
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  padding-left: 25px;
+}
+.h2 {
+  font-family: "Lora";
+}
+.h3 {
+  font-family: "Oswald";
+}
+.ocean {
+  height: 100px; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 63%;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23000000'/%3E%3C/svg%3E");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 12s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.2;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 23s -1s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
